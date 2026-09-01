@@ -208,19 +208,51 @@ button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
 .form-status.success { color: #2e5c3e; }
 .form-status.error { color: #8b2331; }
 
-/* --- Asides --- */
+/* --- Cagnotte --- */
 
-.cagnotte-aside,
-.contact-aside {
-  text-align: center;
-  font-size: 0.86rem;
-  color: var(--ink-soft);
-  max-width: 30rem;
-  margin: 1.25rem auto 0;
+.cagnotte-box {
+  background: #faf3de;
+  border: 1px solid #e5d19c;
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  margin: 1.5rem 0 0;
 }
 
-.cagnotte-aside a,
-.contact-aside a {
+.cagnotte-box-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--navy);
+  margin: 0 0 0.5rem;
+}
+
+.cagnotte-box-text {
+  font-size: 0.9rem;
+  color: var(--ink);
+  margin: 0 0 0.9rem;
+}
+
+.cagnotte-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cagnotte-options li {
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid #e5d19c;
+}
+
+.cagnotte-options li:first-child { border-top: none; padding-top: 0; }
+.cagnotte-options li:last-child { padding-bottom: 0; }
+
+.cagnotte-opt-label {
+  font-weight: 600;
+  color: var(--gold-deep);
+  margin-right: 0.4rem;
+}
+
+.cagnotte-options a {
   color: var(--navy);
   font-weight: 600;
 }
