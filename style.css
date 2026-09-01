@@ -5,6 +5,7 @@
   --cream-panel: #fffdf8;
   --gold: #b4903f;
   --gold-soft: #d8c393;
+  --gold-deep: #8a6a28;
   --red: #7a2331;
   --ink: #1c2230;
   --ink-soft: #4a5266;
@@ -32,6 +33,21 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: 2.75rem 1.25rem 3rem;
+}
+
+/* --- Bannière illustrée --- */
+
+.hero-banner {
+  margin: 0 0 1.25rem;
+  border: 1px solid var(--gold);
+  padding: 5px;
+  background: var(--cream-panel);
+}
+
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* --- Cadre doré, à l'image du carton d'invitation --- */
@@ -118,6 +134,15 @@ h1 {
   margin: 0;
 }
 
+.subdate {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-deep);
+  margin: 0.6rem 0 0;
+  letter-spacing: 0.02em;
+}
+
 .lede {
   font-family: var(--serif);
   font-style: italic;
@@ -138,6 +163,76 @@ h1 {
 
 .intro p { margin: 0 0 1rem; }
 .intro p:last-child { margin-bottom: 0; }
+
+.contact-note {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.contact-note a { color: var(--navy); }
+
+/* --- Cagnotte --- */
+
+.cagnotte {
+  background: var(--navy);
+  color: var(--cream);
+  margin: 0 -2.25rem;
+  padding: 1.75rem 2.25rem;
+}
+
+.cagnotte h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--gold-soft);
+  margin: 0 0 0.9rem;
+}
+
+.cagnotte p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--cream);
+  margin: 0 0 0.9rem;
+}
+
+.cagnotte-list {
+  list-style: none;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  border-top: 1px solid rgba(216, 195, 147, 0.3);
+  border-bottom: 1px solid rgba(216, 195, 147, 0.3);
+}
+
+.cagnotte-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.6rem;
+  padding: 0.7rem 0;
+  font-size: 0.94rem;
+  border-top: 1px solid rgba(216, 195, 147, 0.15);
+}
+
+.cagnotte-list li:first-child { border-top: none; }
+
+.cagnotte-label {
+  font-weight: 600;
+  color: var(--gold-soft);
+  min-width: 6.5rem;
+}
+
+.cagnotte-list a {
+  color: var(--cream);
+  text-decoration: underline;
+  text-decoration-color: var(--gold-soft);
+}
+
+.cagnotte-note {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.02rem;
+  color: var(--gold-soft);
+  margin-bottom: 0;
+}
 
 .divider {
   display: flex;
@@ -309,6 +404,8 @@ button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
   .frame > * { padding-left: 1.1rem; padding-right: 1.1rem; }
   .frame > .hero { padding-top: 2rem; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
+  .cagnotte { margin: 0 -1.1rem; padding: 1.5rem 1.1rem; }
+  .cagnotte-label { min-width: 100%; }
 }
 
 /* --- Reduced motion --- */
