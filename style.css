@@ -41,25 +41,39 @@ body {
 }
 
 .hero-eyebrow {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gold);
-  margin: 0 0 0.6rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 0.9rem;
 }
 
 .hero-band h1 {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: clamp(1.9rem, 6vw, 2.5rem);
-  margin: 0 0 0.6rem;
+  font-size: clamp(2.5rem, 9vw, 3.4rem);
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
   color: var(--white);
 }
 
-.hero-sub {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.72);
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 1.1rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--navy-deep);
+  background: var(--gold);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
   margin: 0;
 }
 
@@ -86,9 +100,23 @@ body {
   margin: 0 0 1.75rem;
 }
 
+.portrait {
+  float: right;
+  width: 128px;
+  margin: 0 0 0.75rem 1.25rem;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px -10px rgba(16, 32, 63, 0.4);
+}
+
 /* --- Form --- */
 
-form { display: flex; flex-direction: column; }
+form { display: flex; flex-direction: column; clear: both; }
 
 .field-row {
   display: grid;
@@ -272,6 +300,7 @@ button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
   .hero-band { padding: 2.5rem 1.1rem 3rem; }
   .card { padding: 1.5rem 1.25rem; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
+  .portrait { width: 92px; margin: 0 0 0.5rem 1rem; }
 }
 
 /* --- Reduced motion --- */
