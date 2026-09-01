@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Livre d'or — Adieux aux armes du LCL Christophe Masse</title>
+<meta name="description" content="Livre d'or numérique à l'occasion des adieux aux armes du lieutenant-colonel Christophe Masse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="page">
+ <div class="frame">
+  <header class="hero">
+    <div class="emblem" aria-hidden="true">
+      <svg viewBox="0 0 100 120" width="56" height="67">
+        <path d="M50 8 L50 30" stroke="var(--gold)" stroke-width="2.5" fill="none"/>
+        <circle cx="50" cy="16" r="7" fill="none" stroke="var(--gold)" stroke-width="2.5"/>
+        <path d="M50 30 C 28 30 20 48 20 62 C 20 82 34 96 50 100 C 66 96 80 82 80 62 C 80 48 72 30 50 30 Z"
+              fill="none" stroke="var(--gold)" stroke-width="2.5"/>
+        <path d="M14 58 L86 58" stroke="var(--gold)" stroke-width="2.5"/>
+        <path d="M50 30 L50 96" stroke="var(--gold)" stroke-width="2.5"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">Livre d'or numérique</p>
+
+    <div class="mini-divider" aria-hidden="true"><span></span></div>
+
+    <h1>Adieu aux armes</h1>
+    <p class="subname">du lieutenant-colonel Christophe&nbsp;Masse</p>
+    <p class="subrole">Délégation Militaire Départementale de Tarn-et-Garonne</p>
+  </header>
+
+  <div class="divider" aria-hidden="true"><span></span></div>
+
+  <section class="intro">
+    <p class="lede">
+      À l'occasion de son départ, fin septembre, nous constituons un livre
+      d'or rassemblant les messages, souvenirs et témoignages de celles et
+      ceux qui ont eu la chance de le croiser, de travailler avec lui ou de
+      l'accompagner au cours de sa carrière.
+    </p>
+    <p>
+      Vous pouvez laisser ici quelques mots à son attention&nbsp;: un souvenir
+      marquant, une qualité qui vous a touché, un moment partagé, ou simplement
+      un message d'amitié et de reconnaissance. Vous pouvez également joindre
+      une ou plusieurs photos si vous le souhaitez.
+    </p>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span></span></div>
+
+  <section class="form-section">
+    <form id="goldenBookForm" novalidate>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="prenom">Prénom <span class="req">*</span></label>
+          <input type="text" id="prenom" name="prenom" required autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="nom">Nom <span class="req">*</span></label>
+          <input type="text" id="nom" name="nom" required autocomplete="family-name">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Adresse e-mail <span class="optional">(facultatif, si besoin de vous recontacter)</span></label>
+        <input type="email" id="email" name="email" autocomplete="email">
+      </div>
+
+      <div class="field">
+        <label for="message">Votre message pour le LCL Masse <span class="req">*</span></label>
+        <textarea id="message" name="message" rows="7" required
+                  placeholder="Un souvenir, une qualité qui vous a marqué, un moment partagé…"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="photos">Photo(s) <span class="optional">(facultatif — JPEG/PNG, 5 Mo max par photo, 3 photos max)</span></label>
+        <input type="file" id="photos" name="photos" accept="image/png, image/jpeg" multiple>
+        <p class="hint" id="photoHint"></p>
+      </div>
+
+      <div class="field consent">
+        <label class="checkbox">
+          <input type="checkbox" id="autorisation" name="autorisation" required>
+          <span>J'autorise l'utilisation de mon message et des photos transmises dans le cadre du livre d'or remis au LCL Masse. <span class="req">*</span></span>
+        </label>
+      </div>
+
+      <!-- Piège à robots : champ invisible (masqué en inline pour éviter tout flash au chargement) -->
+      <div class="hp-field" aria-hidden="true"
+           style="position:absolute !important; left:-9999px !important; top:-9999px !important; width:1px !important; height:1px !important; overflow:hidden !important;">
+        <label for="site">Ne pas remplir ce champ</label>
+        <input type="text" id="site" name="site" tabindex="-1" autocomplete="off">
+      </div>
+
+      <p class="privacy-note">
+        Les informations recueillies via ce formulaire sont destinées exclusivement
+        à la constitution du livre d'or remis au LCL Masse et ne seront pas
+        diffusées publiquement. Elles seront conservées le temps nécessaire à la
+        réalisation de ce livre d'or, puis supprimées.
+      </p>
+
+      <button type="submit" id="submitBtn">Envoyer mon message</button>
+
+      <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+    </form>
+  </section>
+
+ </div><!-- /.frame -->
+</main>
+
+<footer class="site-footer">
+  <p>Délégation Militaire Départementale de Tarn-et-Garonne</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

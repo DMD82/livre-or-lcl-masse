@@ -1,0 +1,319 @@
+:root {
+  --navy: #0e2038;
+  --navy-deep: #081426;
+  --cream: #f6f2e9;
+  --cream-panel: #fffdf8;
+  --gold: #b4903f;
+  --gold-soft: #d8c393;
+  --red: #7a2331;
+  --ink: #1c2230;
+  --ink-soft: #4a5266;
+  --line: #e2d9c4;
+
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.75rem 1.25rem 3rem;
+}
+
+/* --- Cadre doré, à l'image du carton d'invitation --- */
+
+.frame {
+  border: 1px solid var(--gold);
+  padding: 6px;
+}
+
+.frame::before { content: none; } /* réservé si besoin d'ornement de coin ultérieurement */
+
+.frame > * {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.frame {
+  background: var(--cream-panel);
+  box-shadow: inset 0 0 0 1px rgba(180, 144, 63, 0.35);
+}
+
+.frame > .hero { padding-top: 3rem; }
+.frame > .form-section:last-of-type,
+.frame > section.form-section { padding-bottom: 3rem; }
+
+/* --- Hero --- */
+
+.hero {
+  text-align: center;
+}
+
+.emblem {
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0;
+}
+
+.mini-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.9rem 0 1.4rem;
+}
+
+.mini-divider span {
+  width: 34px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 6vw, 2.5rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--navy);
+  margin: 0 0 0.6rem;
+}
+
+.subname {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin: 0 0 0.4rem;
+}
+
+.subrole {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 34rem;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+/* --- Intro --- */
+
+.intro {
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
+.intro p { margin: 0 0 1rem; }
+.intro p:last-child { margin-bottom: 0; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.25rem 0;
+}
+
+.divider span {
+  width: 100%;
+  max-width: 220px;
+  height: 1px;
+  background: var(--gold);
+  position: relative;
+}
+
+.divider span::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -3.5px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  background: var(--cream-panel);
+  border: 1px solid var(--gold);
+}
+
+/* --- Form --- */
+
+.form-section {
+  background: transparent;
+  padding: 0;
+}
+
+form { display: flex; flex-direction: column; }
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+.req { color: var(--red); font-weight: 600; }
+.optional { font-weight: 400; color: var(--ink-soft); font-size: 0.85rem; }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  font-family: var(--sans);
+  font-size: 1rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: #fff;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(180, 144, 63, 0.15);
+}
+
+textarea { resize: vertical; min-height: 140px; font-family: var(--sans); }
+
+input[type="file"] {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+}
+
+.hint {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin: 0.4rem 0 0;
+  min-height: 1.1em;
+}
+
+.consent { margin-top: 0.5rem; }
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-weight: 400;
+  font-size: 0.92rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.checkbox input {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--navy);
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.privacy-note {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  padding-top: 1.25rem;
+  margin: 0.5rem 0 1.75rem;
+}
+
+button[type="submit"] {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--cream);
+  background: var(--navy);
+  border: none;
+  border-radius: 2px;
+  padding: 0.95rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button[type="submit"]:hover { background: var(--navy-deep); }
+button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.form-status {
+  margin-top: 1.1rem;
+  font-size: 0.95rem;
+  min-height: 1.4em;
+}
+
+.form-status.success { color: #2e5c3e; }
+.form-status.error { color: var(--red); }
+
+/* --- Footer --- */
+
+.site-footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem 3rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 560px) {
+  .page { padding: 1.75rem 0.75rem 2rem; }
+  .frame > * { padding-left: 1.1rem; padding-right: 1.1rem; }
+  .frame > .hero { padding-top: 2rem; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* --- Reduced motion --- */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
