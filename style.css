@@ -37,7 +37,7 @@ body {
 .hero-icon {
   width: 62px;
   height: auto;
-  margin-bottom: 1rem;
+  margin: 0.75rem 0 1.25rem;
 }
 
 .hero-eyebrow {
@@ -46,7 +46,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.65);
-  margin: 0 0 0.9rem;
+  margin: 0;
 }
 
 .hero-band h1 {
@@ -62,6 +62,13 @@ body {
   font-family: var(--serif);
   font-size: clamp(1.15rem, 3vw, 1.4rem);
   color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 0.6rem;
+}
+
+.hero-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold);
   margin: 0 0 1.1rem;
 }
 
